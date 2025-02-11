@@ -1,0 +1,35 @@
+.running-line-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #37c0fb;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Make the text container extra wide to allow continuous looping */
+.running-line {
+    display: flex;
+    gap: 20px;
+    /* Space between messages */
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+    will-change: transform;
+    animation: run 15s linear infinite;
+}
+
+/* Animation: Moves the text smoothly one after another */
+@keyframes run {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

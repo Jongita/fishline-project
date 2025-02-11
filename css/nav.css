@@ -1,0 +1,79 @@
+
+.mainHeaderContainer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 50px;
+ height: 50px;
+ background-color: #2B0236;
+ position: fixed;
+    /* Fixed position to stay at the top */
+    top: 0;
+    /* Aligns it to the top */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensures it's on top of other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: adds a shadow for effect */
+}
+
+
+.mainHeaderList {
+ display: flex;
+
+}
+
+.mainList {
+    display: flex;
+    align-items: center;
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block !important;
+        /* Force visibility */
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #2B0236;
+        margin-right: 20px;
+        z-index: 1000;
+        /* Ensure it's above other elements */
+    }
+}
+
+@media (max-width: 768px) {
+    .mainList {
+        flex-direction: column;
+    }
+
+    /* Hide the menu initially */
+    .mainHeaderList {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: beige;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 999;
+    }
+
+    /* Show menu when active */
+    .mainHeaderList.active {
+        display: flex;
+    }
+}
+
+/* Default: Hide the hamburger button on large screens */
+.nav-toggle {
+    display: none;
+}
