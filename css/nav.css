@@ -1,14 +1,15 @@
 
 .mainHeaderContainer {
  display: flex;
- justify-content:space-around;
- align-items:last baseline;
+ justify-content:center;
+ align-items:center;
 
- gap: 50px;
+ gap: 100px;
  height: 70px;
- background: rgba(0, 0, 0, 0.6);
+ background: rgba(0, 0, 0, 0.1);
     /* Transparent black background */
     color: white;
+    font-weight: 800;
  position: fixed;
     /* Fixed position to stay at the top */
     top: 0;
@@ -19,12 +20,12 @@
     /* Ensures it's on top of other content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Optional: adds a shadow for effect */
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .mainHeaderList {
  display: flex;
- gap: 30px;
+ gap: 100px;
 
 }
 
@@ -32,7 +33,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    gap: 50px;
 }
 
 .mainList li a {
@@ -66,6 +67,14 @@
 .languages li a:hover{
     color: white;
     transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.phone {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #37c0fb;
 }
 
 @media (max-width: 768px) {
