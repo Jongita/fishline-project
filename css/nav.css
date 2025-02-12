@@ -1,11 +1,14 @@
 
 .mainHeaderContainer {
  display: flex;
- justify-content: center;
- align-items: center;
+ justify-content:space-around;
+ align-items:last baseline;
+
  gap: 50px;
- height: 50px;
- background-color: #2B0236;
+ height: 70px;
+ background: rgba(0, 0, 0, 0.6);
+    /* Transparent black background */
+    color: white;
  position: fixed;
     /* Fixed position to stay at the top */
     top: 0;
@@ -16,22 +19,53 @@
     /* Ensures it's on top of other content */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Optional: adds a shadow for effect */
+    font-size: 12px;
 }
-
 
 .mainHeaderList {
  display: flex;
+ gap: 30px;
 
 }
 
 .mainList {
     display: flex;
     align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.mainList li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+   
 }
 
 .languages {
     display: flex;
     align-items: center;
+    list-style: none;
+    text-decoration: none;
+    gap: 20px;
+}
+
+.languages li a {
+    text-decoration: none;
+    color: #37c0fb;
+    cursor: pointer;
+    
+    
+}
+
+.mainList li a:hover {
+    color: #37c0fb;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.languages li a:hover{
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -42,7 +76,7 @@
         background: none;
         border: none;
         cursor: pointer;
-        color: #2B0236;
+        color: white;
         margin-right: 20px;
         z-index: 1000;
         /* Ensure it's above other elements */
@@ -61,10 +95,11 @@
         position: absolute;
         top: 80px;
         right: 0;
-        background: beige;
+        background: rgba(0, 0, 0, 0.6) ;
         text-align: center;
         padding: 10px 0;
         z-index: 999;
+        width: 100%;
     }
 
     /* Show menu when active */

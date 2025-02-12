@@ -22,7 +22,7 @@ header {
     /* 100% of the viewport height */
     width: 100vw;
     /* 100% of the viewport width */
-    background-image: url();
+    background-image: url('/images/banner.png');
     /* Add the image path */
     background-position: center center;
     /* Center the image */

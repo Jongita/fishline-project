@@ -22,6 +22,7 @@
 
 /* Bottom transparent bar with text */
 .bottom-line {
+
     position: absolute;
     bottom: 0;
     /* Stick to the bottom of the image */
@@ -31,12 +32,12 @@
     /* Transparent black background */
     color: white;
     /* Text color */
-    padding: 30px;
+    height: 70px;
     text-align: center;
 }
 
 .bottom-line h2 {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
     padding: 5px;
 }
