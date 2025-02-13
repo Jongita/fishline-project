@@ -1,24 +1,24 @@
 
 .mainHeaderContainer {
- display: flex;
- justify-content:center;
- align-items:center;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 
- gap: 100px;
- height: 70px;
- background: rgba(0, 0, 0, 0.1);
+    gap: 200px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.5);
     /* Transparent black background */
     color: white;
     font-weight: 600;
- position: fixed;
+    position: fixed;
     /* Fixed position to stay at the top */
     top: 0;
     /* Aligns it to the top */
     left: 0;
     width: 100%;
-    z-index: 1000;
+    /* z-index: 1000; */
     /* Ensures it's on top of other content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
     /* Optional: adds a shadow for effect */
     font-size: 14px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);

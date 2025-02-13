@@ -1,0 +1,30 @@
+.fullscreen-image {
+    height: 100vh;
+    /* 100% of the viewport height */
+    width: 100vw;
+    /* 100% of the viewport width */
+    position: relative;
+    /* To position the overlay on top */
+    background-image: url('/images/background.jpg');
+    /* Add the image path */
+    background-position: center center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Prevent the image from repeating */
+    background-size: cover;
+    /* Ensure the image covers the entire area */
+}
+
+.fullscreen-image::after {
+    content: '';
+    /* Empty content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    z-index: 1;
+    /* Place it above the image but below the text */
+}

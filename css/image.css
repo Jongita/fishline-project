@@ -13,6 +13,7 @@
     /* Ensure the image covers the entire area */
 }
 
+
 .fixed-text {
     position: absolute;
     top: 20%;
@@ -64,38 +65,73 @@
     /* Tekstas pasirodo */
 }
 
+.button {
+    color:white;
+    margin-top: 20px;
+        text-decoration: none;
+        padding: 0px 30px;
+        line-height: 45px;
+        /* Adjust padding for better proportions */
+        border-radius: 30px;
+        /* Increased border radius for a more rounded look */
+        background-color: #37c0fb;
+        font-size: 15px;
+        /* Optional: adjust the font size for better readability */
+        display: inline-block;
+        /* Ensures the background is sized around the content */
+        text-align: center;
+        /* Center-align the text inside the link */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+        /* Add subtle shadow for depth */
+        transition: background-color 0.1s ease, transform 0.1s ease;
+        /* Smooth transition for hover effects */
+}
 
+.button:hover {
+    background-color: #2a9ed8;
+    /* Slightly darker blue on hover */
+    /* transform: scale(1.05); */
+    /* Slight zoom effect when hovered */
+}
 
 
 
 /* Bottom transparent bar with text */
 .bottom-line {
-
     position: absolute;
     bottom: 0;
-    /* Stick to the bottom of the image */
-    left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    /* Transparent black background */
-    color: white;
-    /* Text color */
     height: 70px;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    /* Dark overlay for better text visibility */
+    color: #37c0fb;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9);
 }
 
-.bottom-line h2 {
-    font-size: 15px;
-    margin: 0;
-    padding: 5px;
+.scrolling-text {
+    display: flex;
+    gap: 150px;
+    /* Space between repeating text */
+    white-space: nowrap;
+    animation: scroll-text 50s linear infinite;
 }
 
-.bottom-line a {
-    color: #FFD700;
-    /* Gold link color */
-    text-decoration: none;
+.scrolling-text span {
+    font-size: 25px;
+    display: inline-block;
 }
 
-.bottom-line a:hover {
-    text-decoration: underline;
+/* Smooth Scrolling Animation */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
