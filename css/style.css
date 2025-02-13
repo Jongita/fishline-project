@@ -7,29 +7,13 @@ body * {
 }
 
 body {
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family: "TT Firs Neue", sans-serif;
 }
 
 header {
     box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
     -webkit-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
     -moz-box-shadow: -1px 1px 3px -1px rgba(8, 8, 8, 0.29);
-}
-
-
-.fullscreen-image {
-    height: 100vh;
-    /* 100% of the viewport height */
-    width: 100vw;
-    /* 100% of the viewport width */
-    background-image: url('/images/background.jpg');
-    /* Add the image path */
-    background-position: center center;
-    /* Center the image */
-    background-repeat: no-repeat;
-    /* Prevent the image from repeating */
-    background-size: cover;
-    /* Ensure the image covers the entire area */
 }
 
 

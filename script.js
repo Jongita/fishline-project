@@ -12,3 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+window.onload = function () {
+    document.querySelector('.fixed-text').classList.add('visible');
+};

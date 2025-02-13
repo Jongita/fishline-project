@@ -9,7 +9,7 @@
  background: rgba(0, 0, 0, 0.1);
     /* Transparent black background */
     color: white;
-    font-weight: 800;
+    font-weight: 600;
  position: fixed;
     /* Fixed position to stay at the top */
     top: 0;
@@ -21,6 +21,8 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* Optional: adds a shadow for effect */
     font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+       
 }
 
 .mainHeaderList {
@@ -55,8 +57,6 @@
     text-decoration: none;
     color: #37c0fb;
     cursor: pointer;
-    
-    
 }
 
 .mainList li a:hover {
@@ -72,9 +72,29 @@
 .phone {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    border-radius: 15px;
+    padding: 12px 20px;
+    /* Adjust padding for better proportions */
+    border-radius: 25px;
+    /* Increased border radius for a more rounded look */
     background-color: #37c0fb;
+    font-size: 15px;
+    /* Optional: adjust the font size for better readability */
+    display: inline-block;
+    /* Ensures the background is sized around the content */
+    text-align: center;
+    /* Center-align the text inside the link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    /* Add subtle shadow for depth */
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    /* Smooth transition for hover effects */
+}
+
+/* Hover effect to make the button feel interactive */
+.phone:hover {
+    background-color: #2a9ed8;
+    /* Slightly darker blue on hover */
+    /* transform: scale(1.05); */
+    /* Slight zoom effect when hovered */
 }
 
 @media (max-width: 768px) {
