@@ -3,9 +3,10 @@
     display: flex;
     justify-content:space-around;
     align-items: last baseline;
-
-    gap: 200px;
-    height: 70px;
+    
+    
+  
+    height: 100px;
     background: transparent;
     /* Transparent black background */
     color: white;
@@ -49,36 +50,21 @@
 
 .mainList li a {
     text-decoration: none;
-    /* Remove the decoration by default */
     color: white;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
-.mainList li:first-child {
-    text-decoration-line: underline;
-    /* Apply underline only to the first link */
-    text-decoration-style: solid;
+.mainList li:first-child a,
+.mainList li:hover a {
+    text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 7.5px;
-}
-
-.mainList li:hover {
-    text-decoration-line: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 7.5px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
-.mainList li a:hover {
-    color: #37c0fb;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
 
-.languages li a:hover{
-    color: white;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
 
 .phone {
     color: white;
