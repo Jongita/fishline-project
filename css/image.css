@@ -127,7 +127,7 @@
 /* Bottom transparent bar with text */
 .bottom-line {
     position: absolute;
-    bottom: 370px;
+    bottom: 350px;
     /* Align to the bottom of the image */
     width: 100%;
 }

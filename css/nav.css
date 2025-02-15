@@ -170,14 +170,16 @@
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 100px;
         right: 0;
-        background: rgba(0, 0, 0, 0.6) ;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         text-align: center;
         padding: 10px 0;
         z-index: 999;
         width: 100%;
     }
+    
 
     /* Show menu when active */
     .mainHeaderList.active {

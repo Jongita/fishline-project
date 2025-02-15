@@ -1,82 +1,82 @@
+/* Main Section Styling */
 .aboutUs-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+    height: 500px;
     margin-top: 200px;
-    background-color: rgb(196, 241, 190);
-    flex-wrap: wrap;
-    /* To allow stacking on smaller screens */
+    /* Fixed height */
 }
 
-.aboutUs-container>div {
-    width: 50%;
-    /* Initially set each div to take 50% of the container width */
-}
-
+/* Image Section */
 .aboutUs-image {
-    width: 100%;
-    height: 50%;
-    background-image: url('/images/aboutUs.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* Ensures the image covers the container */
-    height: 100vh;
-    /* Make it cover full screen height */
-    min-height: 400px;
-    /* To prevent it from shrinking too much */
-    /* Optional: Adding fixed attachment for parallax effect */
-    background-attachment: fixed;
+    flex: 1;
+    /* 50% width */
+    height: 100%;
 }
 
-/* Text content styles */
+.aboutUs-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the div */
+}
+
+/* Text Section */
 .aboutUs-text {
+    flex: 1;
+    /* 50% width */
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-left: 20px;
-    text-align: left;
-    max-width: 500px;
+    justify-content: center;
+    padding: 20px;
+    background: rgb(196, 241, 190);
+    /* Light background for contrast */
 }
 
 .aboutUs-content {
     text-align: left;
+    max-width: 80%;
 }
 
-h1 {
-    margin-bottom: 15px;
+.aboutUs-content h1 {
     font-size: 28px;
+    margin-bottom: 15px;
 }
 
-p {
+.aboutUs-content p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .aboutUs-container {
         flex-direction: column;
-        /* Stack the image and text */
-        margin-top: 100px;
-        /* Adjust top margin for smaller screens */
+        height: auto;
+        /* Allow content to define height */
     }
 
-    .aboutUs-container>div {
+    .aboutUs-image,
+    .aboutUs-text {
+        flex: none;
         width: 100%;
-        /* On smaller screens, each div takes full width */
+        /* Each div takes full width */
+        height: 250px;
+        /* Adjusted height for smaller screens */
     }
 
-    .aboutUs-image {
-        height: 50vh;
-        /* Set image height to 50% of the viewport height */
-        background-attachment: scroll;
-        /* Optional: Remove fixed attachment for mobile */
+    .aboutUs-image img {
+        height: 100%;
     }
 
     .aboutUs-text {
-        padding-left: 10px;
-        /* Less padding for smaller screens */
+        height: auto;
+        padding: 30px;
+    }
+
+    .aboutUs-content {
+        max-width: 100%;
+        text-align: center;
     }
 }
