@@ -64,10 +64,12 @@
         font-size: 25px;
         /* Mažesnis šriftas mažesniems ekranams */
         width: 90%;
-        text-align: center;
+ 
+      
         line-height: 35px;
         ;
         max-width: 95%;
+        min-width: 320px;
         padding: 10px;
         top: 20%;
         left: 50%;
@@ -127,7 +129,7 @@
 /* Bottom transparent bar with text */
 .bottom-line {
     position: absolute;
-    bottom: 350px;
+    bottom: 0;
     /* Align to the bottom of the image */
     width: 100%;
 }

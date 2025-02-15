@@ -39,13 +39,16 @@
 }
 
 .aboutUs-content h1 {
-    font-size: 28px;
+    font-size: 31.5px;
+    font-weight: 400;
+    line-height: 40.95px;
     margin-bottom: 15px;
 }
 
 .aboutUs-content p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25.5px;
     margin-bottom: 10px;
 }
 
