@@ -71,7 +71,7 @@
         flex: none;
         width: 100%;
         /* Each div takes full width */
-        height: 250px;
+        height: 350px;
         /* Adjusted height for smaller screens */
     }
 
@@ -86,6 +86,5 @@
 
     .aboutUs-content {
         max-width: 100%;
-        text-align: center;
     }
 }
