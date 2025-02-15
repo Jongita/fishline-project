@@ -47,7 +47,7 @@
     font-size: 31.5px;
     font-weight: 400;
     line-height: 40.95px;
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
 }
 
 .text {
@@ -55,7 +55,7 @@
     font-weight: 300;
     line-height: 25.5px;
     margin-top: 30px;
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
 }
 
 /* Pritaikymas mobiliesiems įrenginiams */
@@ -86,8 +86,8 @@
 }
 
 .productList {
-    color: rgb(0, 0, 0);
-        background: rgb(255, 255, 255);
+    color: var(--secondary-color);
+        background: var(--primary-color);
         margin: 30px 10px 10px 0;
         padding: 13.5px 21.75px;
         font-size: 15px;
@@ -105,7 +105,7 @@
 }
 
 .aboutUs {
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
         margin: 30px 10px 10px 0;
         text-decoration: none;
         padding: 11.4px 21.75px;
@@ -115,7 +115,7 @@
         min-width: 120px;
         text-align: center;
         display: inline-block;
-        border: 2px solid rgb(255, 255, 255);
+        border: 2px solid var(--primary-color);
         background: transparent;
         opacity: 0.8;
         transition: 0.3s ease;
@@ -135,8 +135,8 @@
     /* Align to the bottom of the image */
     width: 100%;
     height: 100px;
-    background: rgb(196, 241, 190);
-    color: rgb(53, 53, 53);
+    background: var(--background-color);
+    color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: center;

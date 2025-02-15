@@ -7,7 +7,14 @@ body * {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
 }
 
-
+:root {
+    --primary-color: rgb(255, 255, 255);
+    /* Given color */
+    --secondary-color: rgb(0, 0, 0);
+    /* Darker shade for contrast */
+    --background-color: rgb(196, 241, 190);
+    /* Lighter shade for background */
+}
 
 .mz_component {
     position: relative;
@@ -33,15 +40,15 @@ body * {
 }
 
 .mainHeaderContainer.scrolled .menu-icon svg {
-    fill: rgba(0, 0, 0);
+    fill: var(--secondary-color);
 }
 
 .mainHeaderContainer.scrolled .menu-icon svg:hover {
-    fill: rgba(0, 0, 0, 0.7);
+    fill: var(--secondary-color);
 }
 
 .menu-icon svg:hover {
-    fill: rgba(255, 255, 255, 0.7);
+    fill: rgb(255, 255, 255, 0.7);
 }
 
 .current-lang {
@@ -51,15 +58,15 @@ body * {
 }
 
 .current-lang:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgb(255, 255, 255, 0.7);
 }
 
 .mainHeaderContainer.scrolled .current-lang {
-    color: rgba(0, 0, 0);
+    color: var(--secondary-color);
 }
 
 .mainHeaderContainer.scrolled .current-lang:hover {
-    color: rgba(0, 0, 0, 0.7);
+    color: rgb(0, 0, 0, 0.7);
 }
 
 #languages-menu {
@@ -69,7 +76,7 @@ body * {
     top: 100%;
     /* Position below the button */
     left: 0;
-    background-color: rgba(255, 255, 255);
+    background-color: var(--primary-color);
     border-radius: 5px;
    
     list-style-type: none;
@@ -85,7 +92,7 @@ body * {
 }
 
 #languages-menu li a {
-    color: rgba(0, 0, 0);
+    color: var(--secondary-color);
     text-decoration: none;
     display: block;
 }
