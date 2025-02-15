@@ -5,6 +5,7 @@
     align-items: center;
     padding: 60px 20px;
     background-color: var(--secondary-background-color);
+    margin-top: 100px;
    
 }
 
@@ -14,8 +15,8 @@
     text-align: center;
     padding: 20px;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+   
     margin: 0 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
