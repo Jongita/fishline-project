@@ -16,10 +16,11 @@ body * {
     /* Lighter shade for background */
     --secondary-background-color: #F4F7FA;
 
-    color: #1D6A75;
+    color: rgb(29, 106, 117);
     color: #A6D8D4;
     color: #F4F7FA;
     color: rgb(196, 241, 190);
+    color: rgba(53, 53, 53, 0.8);;
 }
 
 .mz_component {
