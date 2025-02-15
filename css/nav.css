@@ -1,12 +1,12 @@
 
 .mainHeaderContainer {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content:space-around;
+    align-items: last baseline;
 
     gap: 200px;
     height: 70px;
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent;
     /* Transparent black background */
     color: white;
     font-weight: 600;
@@ -16,13 +16,19 @@
     /* Aligns it to the top */
     left: 0;
     width: 100%;
-    /* z-index: 1000; */
+    z-index: 1000;
     /* Ensures it's on top of other content */
  
     /* Optional: adds a shadow for effect */
     font-size: 14px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); */
        
+}
+.logo{
+    color: rgb(255, 255, 255);
+    font-size: 34.5px;
+    font-weight: 700;
+    line-height: 34.5px;
 }
 
 .mainHeaderList {
@@ -36,28 +42,33 @@
     align-items: center;
     list-style: none;
     gap: 50px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
 }
 
 .mainList li a {
     text-decoration: none;
+    /* Remove the decoration by default */
     color: white;
     cursor: pointer;
-   
 }
 
-.languages {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-    gap: 20px;
+.mainList li:first-child {
+    text-decoration-line: underline;
+    /* Apply underline only to the first link */
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7.5px;
 }
 
-.languages li a {
-    text-decoration: none;
-    color: #37c0fb;
-    cursor: pointer;
+.mainList li:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7.5px;
 }
+
 
 .mainList li a:hover {
     color: #37c0fb;

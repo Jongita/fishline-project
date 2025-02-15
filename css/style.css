@@ -7,9 +7,76 @@ body * {
 }
 
 body {
-    font-family: "TT Firs Neue", sans-serif;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
 }
 
+.mz_component {
+    position: relative;
+}
 
+.menu-icon {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: white;
+    /* Ensures text (language name) is white */
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
 
+.menu-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    /* Set the SVG icon to white */
+}
+
+.current-lang {
+    margin-left: 8px;
+    /* Spacing between icon and current language */
+    font-size: 16px;
+}
+
+#languages-menu {
+    display: none;
+    /* Initially hide the language menu */
+    position: absolute;
+    top: 100%;
+    /* Position below the button */
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    z-index: 1000;
+}
+
+#languages-menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+#languages-menu li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+#languages-menu li.selected a {
+    font-weight: bold;
+    color: #007bff;
+    /* Highlight current language */
+}
+
+.menu-icon:hover+#languages-menu,
+#languages-menu:hover {
+    display: block;
+    /* Show the menu on hover */
+}
 
