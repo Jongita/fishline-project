@@ -3,7 +3,7 @@
     /* 70% of the viewport height */
     width: 100vw;
     /* 100% of the viewport width */
-    background-image: url('/images/background.jpg');
+    background-image: url('/images/background.png');
     /* Add the image path */
     background-position: center center;
     /* Center the image */
@@ -75,7 +75,7 @@
         left: 50%;
     }
     .fullscreen-image {
-        height: 90vh;
+        height: 80vh;
     }
 }
 
