@@ -2,9 +2,15 @@
 .aboutUs-container {
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 600px;
     margin-top: 200px;
     /* Fixed height */
+}
+
+@media (max-width: 1050px) {
+.aboutUs-container{
+    height: 700px;
+}
 }
 
 /* Image Section */
@@ -53,7 +59,7 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
     .aboutUs-container {
         flex-direction: column;
         height: auto;

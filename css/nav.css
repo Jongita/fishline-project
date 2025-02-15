@@ -1,38 +1,23 @@
 
 .mainHeaderContainer {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: last baseline;
     height: 100px;
     background: transparent;
-    /* Transparent black background */
     color: var(--primary-color);
     font-weight: 600;
     position: fixed;
-    /* Fixed position to stay at the top */
     top: 0;
-    /* Aligns it to the top */
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* Ensures it's on top of other content */
     font-size: 14px;
 }
 
 .mainHeaderContainer.scrolled {
-    display: flex;
-        justify-content: space-around;
-        align-items: last baseline;
-        height: 100px;
-        background: var(--primary-color);
-        color: var(--secondary-color);
-        font-weight: 600;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        font-size: 14px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .logo {
@@ -47,9 +32,8 @@
 }
 
 .mainHeaderList {
- display: flex;
- gap: 100px;
-
+    display: flex;
+    gap: 100px;
 }
 
 .mainList {
@@ -70,9 +54,9 @@
 }
 
 /* Change color of links when the page is scrolled */
-.mainHeaderContainer.scrolled .mainList li a {
+.mainHeaderContainer.scrolled .mainList li a,
+.mainHeaderContainer.scrolled .mainList li:first-child a {
     color: var(--secondary-color);
-    /* Change link color to black */
 }
 
 .mainList li:first-child a,
@@ -83,85 +67,65 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* When scrolled, underlined links should have black color */
-.mainHeaderContainer.scrolled .mainList li:first-child a {
-    color: var(--secondary-color);
-}
-
+/* Ensure hover effects persist when scrolled */
 .mainHeaderContainer.scrolled .mainList li a:hover {
     color: var(--secondary-color);
 }
 
-.mainHeaderContainer.scrolled .mainList li:first-child a {
-    color: var(--secondary-color);
-}
-
-
-
-
+/* Mobile Styles */
 @media (max-width: 768px) {
     .mainHeaderContainer {
         height: 100px;
         min-width: 320px;
     }
+
+    /* Hamburger button */
     .nav-toggle {
-            display: block !important;
-            font-size: 30px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--primary-color);
-            position: absolute;
-            left: 20px;
-            /* Position it at the left */
-            top: 50%;
-            /* Center it vertically */
-            transform: translateY(-50%);
-            /* Center vertically */
-            z-index: 1000;
-            /* Ensure it's above other elements */
-        }
-    
-        /* Logo (centered) */
-        .logo {
-            position: absolute;
-            left: 50%;
-            top: 38%;
-            transform: translateX(-50%);
-       
-            /* Center horizontally */
-            font-size: 34.5px;
-            font-weight: 700;
-            line-height: 34.5px;
-            color: var(--primary-color);
-        }
-    
-        /* Languages (right side) */
-        .mz_component {
-            position: absolute;
-            right: 20px;
-            /* Position it at the right */
-            top: 56%;
-            /* Vertically center */
-    
-            transform: translateY(-50%);
-            /* Center vertically */
-        }
-    
-        .nav-toggle:hover {
-            color: rgb(255, 255, 255, 0.7);
-        }
-    
-        .mainHeaderContainer.scrolled .nav-toggle {
-            color: var(--secondary-color);
-        }
-    
-        .mainHeaderContainer.scrolled .nav-toggle:hover {
-            color: var(--secondary-color);
-        }
+        display: block !important;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--primary-color);
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
     }
 
-@media (max-width: 768px) {
+    .nav-toggle:hover {
+        color: rgb(255, 255, 255, 0.7);
+    }
+
+    .mainHeaderContainer.scrolled .nav-toggle {
+        color: var(--secondary-color);
+    }
+
+    .mainHeaderContainer.scrolled .nav-toggle:hover {
+        color: var(--secondary-color);
+    }
+
+    /* Logo (centered) */
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 38%;
+        transform: translateX(-50%);
+        font-size: 34.5px;
+        font-weight: 700;
+        line-height: 34.5px;
+        color: var(--primary-color);
+    }
+
+    /* Languages (right side) */
+    .mz_component {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .mainList {
         flex-direction: column;
     }
@@ -179,9 +143,7 @@
         padding: 10px 0;
         z-index: 999;
         width: 100%;
-        
     }
-    
 
     /* Show menu when active */
     .mainHeaderList.active {
