@@ -1,0 +1,96 @@
+/* Main Section Styling */
+.facts-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--secondary-background-color);
+   
+}
+
+/* Fact Box Styling */
+.facts-section .fact {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Fact Box */
+.facts-section .fact:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon/Image Styling */
+.facts-section .fact-icon {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.facts-section .fact-icon img,
+.facts-section .fact-icon i {
+    width: 70px;
+    /* Set a fixed size for both icons and images */
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    /* Smooth expansion */
+}
+
+/* Hover Effect for Icon/Image */
+.facts-section .fact-icon:hover img,
+.facts-section .fact-icon:hover i {
+    transform: scale(1.1);
+    /* Slightly increase the size on hover */
+}
+
+/* Fact Text Styling */
+.facts-section .fact-text h3 {
+    font-size: 21.5px;
+    font-weight: 400;
+    line-height: 40.95px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.facts-section .fact-text p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--secondary-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .facts-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .facts-section .fact {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .facts-section .fact-text h3 {
+        font-size: 20px;
+    }
+
+    .facts-section .fact-text p {
+        font-size: 14px;
+    }
+}
+
+.facts-section .fact-icon {
+    margin-bottom: 20px;
+}
+
+.facts-section .fact-icon i {
+    font-size: 60px;
+    color: var(--secondary-color);
+    /* Customize the icon color */
+}
