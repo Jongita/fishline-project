@@ -15,3 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
     document.querySelector('.fixed-text').classList.add('visible');
 };
+
+window.addEventListener('scroll', function () {
+    const header = document.querySelector('.mainHeaderContainer');
+
+    // Check if the scroll position is greater than 0
+    if (window.scrollY > 0) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});

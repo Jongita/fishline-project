@@ -41,6 +41,8 @@
     /* Pradžia nematoma */
 }
 
+
+
 .mainText {
     font-size: 31.5px;
     font-weight: 400;
@@ -57,7 +59,7 @@
 }
 
 /* Pritaikymas mobiliesiems įrenginiams */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .fixed-text {
         font-size: 25px;
         /* Mažesnis šriftas mažesniems ekranams */

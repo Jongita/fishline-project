@@ -3,9 +3,6 @@
     display: flex;
     justify-content:space-around;
     align-items: last baseline;
-    
-    
-  
     height: 100px;
     background: transparent;
     /* Transparent black background */
@@ -19,17 +16,34 @@
     width: 100%;
     z-index: 1000;
     /* Ensures it's on top of other content */
- 
-    /* Optional: adds a shadow for effect */
     font-size: 14px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); */
-       
 }
-.logo{
+
+.mainHeaderContainer.scrolled {
+    display: flex;
+        justify-content: space-around;
+        align-items: last baseline;
+        height: 100px;
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        font-size: 14px;
+}
+
+.logo {
     color: rgb(255, 255, 255);
     font-size: 34.5px;
     font-weight: 700;
     line-height: 34.5px;
+}
+
+.mainHeaderContainer.scrolled .logo {
+    color: rgb(0, 0, 0);
 }
 
 .mainHeaderList {
@@ -50,9 +64,15 @@
 
 .mainList li a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: 0.3s ease;
+}
+
+/* Change color of links when the page is scrolled */
+.mainHeaderContainer.scrolled .mainList li a {
+    color: black;
+    /* Change link color to black */
 }
 
 .mainList li:first-child a,
@@ -63,51 +83,82 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-
-
-
-.phone {
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    /* Adjust padding for better proportions */
-    border-radius: 25px;
-    /* Increased border radius for a more rounded look */
-    background-color: #37c0fb;
-    font-size: 15px;
-    /* Optional: adjust the font size for better readability */
-    display: inline-block;
-    /* Ensures the background is sized around the content */
-    text-align: center;
-    /* Center-align the text inside the link */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
-    /* Add subtle shadow for depth */
-    transition: background-color 0.1s ease, transform 0.1s ease;
-    /* Smooth transition for hover effects */
+/* When scrolled, underlined links should have black color */
+.mainHeaderContainer.scrolled .mainList li:first-child a {
+    color: rgba(0, 0, 0);
 }
 
-/* Hover effect to make the button feel interactive */
-.phone:hover {
-    background-color: #2a9ed8;
-    /* Slightly darker blue on hover */
-    /* transform: scale(1.05); */
-    /* Slight zoom effect when hovered */
+.mainHeaderContainer.scrolled .mainList li a:hover {
+    color: rgb(0, 0, 0, 0.6);
 }
+
+.mainHeaderContainer.scrolled .mainList li:first-child a {
+    color: rgb(0, 0, 0, 0.6);
+}
+
+
+
 
 @media (max-width: 768px) {
-    .nav-toggle {
-        display: block !important;
-        /* Force visibility */
-        font-size: 28px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: white;
-        margin-right: 20px;
-        z-index: 1000;
-        /* Ensure it's above other elements */
+    .mainHeaderContainer {
+        height: 100px;
     }
-}
+    .nav-toggle {
+            display: block !important;
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            left: 20px;
+            /* Position it at the left */
+            top: 50%;
+            /* Center it vertically */
+            transform: translateY(-50%);
+            /* Center vertically */
+            z-index: 1000;
+            /* Ensure it's above other elements */
+        }
+    
+        /* Logo (centered) */
+        .logo {
+            position: absolute;
+            left: 50%;
+            top: 38%;
+            transform: translateX(-50%);
+       
+            /* Center horizontally */
+            font-size: 34.5px;
+            font-weight: 700;
+            line-height: 34.5px;
+            color: white;
+        }
+    
+        /* Languages (right side) */
+        .mz_component {
+            position: absolute;
+            right: 20px;
+            /* Position it at the right */
+            top: 56%;
+            /* Vertically center */
+    
+            transform: translateY(-50%);
+            /* Center vertically */
+        }
+    
+        .nav-toggle:hover {
+            color: rgb(255, 255, 255, 0.7);
+        }
+    
+        .mainHeaderContainer.scrolled .nav-toggle {
+            color: rgb(0, 0, 0);
+        }
+    
+        .mainHeaderContainer.scrolled .nav-toggle:hover {
+            color: rgb(0, 0, 0, 0.7);
+        }
+    }
 
 @media (max-width: 768px) {
     .mainList {

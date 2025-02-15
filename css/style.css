@@ -8,7 +8,6 @@ body * {
 
 body {
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
 }
 
 .mz_component {
@@ -34,10 +33,34 @@ body {
     /* Set the SVG icon to white */
 }
 
+.mainHeaderContainer.scrolled .menu-icon svg {
+    fill: rgba(0, 0, 0);
+}
+
+.mainHeaderContainer.scrolled .menu-icon svg:hover {
+    fill: rgba(0, 0, 0, 0.7);
+}
+
+.menu-icon svg:hover {
+    fill: rgba(255, 255, 255, 0.7);
+}
+
 .current-lang {
     margin-left: 8px;
     /* Spacing between icon and current language */
     font-size: 16px;
+}
+
+.current-lang:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.mainHeaderContainer.scrolled .current-lang {
+    color: rgba(0, 0, 0);
+}
+
+.mainHeaderContainer.scrolled .current-lang:hover {
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #languages-menu {
@@ -47,9 +70,9 @@ body {
     top: 100%;
     /* Position below the button */
     left: 0;
-    background-color: white;
+    background-color: rgba(255, 255, 255);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -63,7 +86,7 @@ body {
 }
 
 #languages-menu li a {
-    color: black;
+    color: rgba(0, 0, 0);
     text-decoration: none;
     display: block;
 }
