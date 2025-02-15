@@ -36,6 +36,7 @@
     justify-content: center;
     padding: 20px;
     background: var(--background-color);
+    color: var(--secondary-color);
     /* Light background for contrast */
 }
 
@@ -71,7 +72,7 @@
         flex: none;
         width: 100%;
         /* Each div takes full width */
-        height: 350px;
+        height: 50px;
         /* Adjusted height for smaller screens */
     }
 
