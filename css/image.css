@@ -15,6 +15,47 @@
     /* Ensure child elements (like the overlay) stay within */
 }
 
+.headerscreen-image {
+    height: 25vh;
+    /* 25% ekrano aukščio */
+    width: 100vw;
+    background-image: url('../images/fish.png');
+    /* Žuvies nuotrauka */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    /* Baltas tekstas ant tamsaus fono */
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Švelnus „dark overlay“ efektas */
+.headerscreen-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Juodas atspalvis su 50% permatomumu */
+}
+
+
+/* Kad tekstas būtų virš overlay */
+.headerscreen-image h1 {
+    position: relative;
+    z-index: 2;
+}
+
 @media (max-width: 930px) {
     .fullscreen-image {
         background-position: left;
@@ -28,7 +69,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(53, 53, 53, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     /* Light grey with 50% transparency */
 }
 

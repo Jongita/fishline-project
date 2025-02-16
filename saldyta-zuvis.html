@@ -1,14 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Šaldytos žuvies produktai</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/nav.css">
+
+    <link rel="stylesheet" href="./css/image.css">
+    <link rel="stylesheet" href="./css/aboutUs.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/facts.css">
+    <link href="https://fonts.googleapis.com/css2?family=TT+Firs+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
-    <div>Puslapis kuriamas...</div>
+    <header>
+        <div class="mainHeaderContainer">
+
+            <!-- Hamburger button -->
+            <button class="nav-toggle" aria-label="Toggle Navigation">&#9776;</button>
+
+            <h2 class="logo">FishLine</h2>
+
+            <div class="mainHeaderList">
+                <ul class="mainList">
+                    <li><a href="index.html">APIE MUS</a></li>
+                    <li><a href="saldyta-zuvis.html">ŠALDYTA ŽUVIS</a></li> <!-- Link to the frozen fish page -->
+                    <li><a href="logistika.html">LOGISTIKA</a></li> <!-- Link to the logistics page -->
+                    <li><a href="#footer">KONTAKTAI</a></li> <!-- Link to footer section -->
+                </ul>
+            </div>
+            <div class="mz_component mz_lngselect" id="languages">
+                <button class="menu-icon" aria-label="Language selection" aria-haspopup="true" aria-controls="languages-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 102">
+                        <path d="M51.61,1H50.39a50,50,0,0,0,0,100h1.22a50,50,0,0,0,0-100ZM33.86,10.46A47.3,47.3,0,0,0,27.27,22H17.92A44,44,0,0,1,33.86,10.46ZM13.49,28H25.18a80.06,80.06,0,0,0-3.13,20H7.11A43.47,43.47,0,0,1,13.49,28ZM12,71h-.2A43.57,43.57,0,0,1,7.11,54H22.05a82,82,0,0,0,2.31,17Zm3.51,6H26.14a49.63,49.63,0,0,0,7.72,14.54A44.19,44.19,0,0,1,15.51,77ZM48,94.61C41.81,93,36.23,86.45,32.55,77H48ZM48,71H30.58a73.76,73.76,0,0,1-2.52-17H48Zm0-23H28.06a72.89,72.89,0,0,1,3.41-20H48Zm0-26H33.83C37.46,14.18,42.49,8.83,48,7.39Zm40.51,6a43.47,43.47,0,0,1,6.38,20H80a80.06,80.06,0,0,0-3.13-20Zm-4.43-6H74.73a47.3,47.3,0,0,0-6.59-11.54A44,44,0,0,1,84.08,22ZM54,7.39C59.51,8.83,64.54,14.18,68.17,22H54ZM54,28H70.53a72.89,72.89,0,0,1,3.41,20H54Zm0,26H73.94a73.76,73.76,0,0,1-2.52,17H54Zm0,40.61V77H69.45C65.77,86.45,60.19,93,54,94.61Zm14.14-3.07A49.63,49.63,0,0,0,75.86,77H86.49A44.19,44.19,0,0,1,68.14,91.54ZM90.2,71H77.64A82,82,0,0,0,80,54H94.89A43.52,43.52,0,0,1,90.2,71Z"></path>
+                    </svg>
+                    <span class="current-lang">LT</span> <!-- Current Language Display -->
+                </button>
+                <ul id="languages-menu" role="menu">
+                    <li class="selected" role="none">
+                        <a href="/" hreflang="en" role="menuitem" aria-label="Lithuania" aria-current="true">LT</a>
+                    </li>
+                    <li role="none">
+                        <a href="index_en.html" hreflang="en" role="menuitem" aria-label="English">EN</a>
+                    </li>
+                    <li role="none">
+                        <a href="index_ua.html" hreflang="ua" role="menuitem" aria-label="Latviešu">UA</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="headerscreen-image">
+
+        </div>
+    </section>
+
+    <section class="product-page">
+        <div class="search-filter">
+            <input type="text" id="searchBar" placeholder="🔍 Ieškoti pagal pavadinimą...">
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Produktai bus dinamiškai sugeneruoti čia -->
+        </div>
+    </section>
+
+    <script>
+        const products = [
+            { rusis: "Šaldyta skumbrė", dydis: "400-600 gr", lotyniskas: "Scomber Scumbrius", kilme: "Norvegija" },
+            { rusis: "Šaldyta menkė", dydis: "500-700 gr", lotyniskas: "Gadus morhua", kilme: "Islandija" },
+            { rusis: "Šaldyta lašiša", dydis: "3-4 kg", lotyniskas: "Salmo salar", kilme: "Škotija" },
+            // Įtrauk dar 50 produktų
+        ];
+
+        function generateProducts() {
+            const productGrid = document.getElementById("productGrid");
+            productGrid.innerHTML = "";
+
+            products.forEach(product => {
+                const productCard = document.createElement("div");
+                productCard.classList.add("product-card");
+                productCard.innerHTML = `
+                    <img src="images/fish_placeholder.png" alt="${product.rusis}">
+                    <h3>${product.rusis}</h3>
+                    <p><strong>Dydis:</strong> ${product.dydis}</p>
+                    <p><strong>Lotyniškas pavadinimas:</strong> ${product.lotyniskas}</p>
+                    <p><strong>Kilmė:</strong> ${product.kilme}</p>
+                    <a href="mailto:info@fishline.com?subject=Pasiūlymas dėl ${product.rusis}" class="btn">Gauti pasiūlymą</a>
+                `;
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        document.getElementById("searchBar").addEventListener("input", function () {
+            const searchText = this.value.toLowerCase();
+            const filteredProducts = products.filter(p => p.rusis.toLowerCase().includes(searchText));
+            generateProducts(filteredProducts);
+        });
+
+        generateProducts();
+    </script>
+
+    <style>
+        .product-page {
+            padding: 20px;
+            background-color: var(--background-color);
+            text-align: center;
+        }
+
+        .search-filter input {
+            width: 80%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: var(--primary-color);
+            padding: 15px;
+
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: var(--background-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+        }
+    </style>
 
 </body>
 
