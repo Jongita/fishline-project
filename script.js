@@ -2,6 +2,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navToggle = document.querySelector(".nav-toggle");
     const navMenu = document.querySelector(".mainHeaderList");
+    const navLinks = document.querySelectorAll(".mainHeaderList a"); // Select all nav links
 
     if (navToggle) {
         navToggle.addEventListener("click", function () {
@@ -10,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Hamburger button (.nav-toggle) not found!");
     }
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+        });
+    });
 });
 
 window.onload = function () {
