@@ -73,10 +73,18 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .mainHeaderContainer {
         height: 100px;
         min-width: 320px;
+
+        display: flex;
+        align-items: flex-end;
+        /* Align items to the bottom */
+        justify-content: space-between;
+        padding: 0 20px;
+        position: fixed;
+        z-index: 1000;
     }
 
     /* Hamburger button */
@@ -88,9 +96,11 @@
         cursor: pointer;
         color: var(--primary-color);
         position: absolute;
-        left: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        
+           
+        left: 20px; 
+        /* top: 50%;
+        transform: translateY(-50%);  */
         z-index: 1000;
     }
 
@@ -110,8 +120,8 @@
     .logo {
         position: absolute;
         left: 50%;
-        top: 38%;
-        transform: translateX(-50%);
+        
+        transform: translateX(-50%);  
         font-size: 34.5px;
         font-weight: 700;
         line-height: 34.5px;
@@ -122,12 +132,25 @@
     .mz_component {
         position: absolute;
         right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
+        /* top: 50%;
+        transform: translateY(-50%); */ 
     }
 
     .mainList {
         flex-direction: column;
+        
+    }
+
+    .mainList li a {
+        color: var(--secondary-color);
+    }
+
+    .mainList li:first-child a,
+    .mainList li:hover a {
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 7.5px;
+        color: rgba(0, 0, 0, 0.7);
     }
 
     /* Hide the menu initially */
@@ -137,17 +160,22 @@
         position: absolute;
         top: 100px;
         right: 0;
-        background: var(--primary-color);
-        color: var(--secondary-color);
-        text-align: center;
-        padding: 10px 0;
+        
+        
+        
+        padding: 30px 0;
         z-index: 999;
         width: 100%;
+        
     }
+
 
     /* Show menu when active */
     .mainHeaderList.active {
         display: flex;
+        flex-direction: column;
+        background: var(--primary-color);
+        color: var(--secondary-color);
     }
 }
 

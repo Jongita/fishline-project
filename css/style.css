@@ -34,14 +34,14 @@ body * {
     border: none;
     color: white;
     /* Ensures text (language name) is white */
-    font-size: 16px;
+   
     cursor: pointer;
-    padding: 10px;
+    padding: 4px;
 }
 
 .menu-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 27px;
+    height: 27px;
     fill: white;
     /* Set the SVG icon to white */
 }
@@ -61,7 +61,7 @@ body * {
 .current-lang {
     margin-left: 8px;
     /* Spacing between icon and current language */
-    font-size: 16px;
+    font-size: 19px;
 }
 
 .current-lang:hover {
@@ -80,16 +80,16 @@ body * {
     display: none;
     /* Initially hide the language menu */
     position: absolute;
-    top: 100%;
+   
     /* Position below the button */
-    left: 0;
+    right: 0px;
     background-color: var(--primary-color);
-    border-radius: 5px;
+    
    
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 100px;
+    width: 70px;
     z-index: 1000;
 }
 
@@ -105,7 +105,7 @@ body * {
 }
 
 #languages-menu li.selected a {
-    font-weight: bold;
+    
     color: #007bff;
     /* Highlight current language */
 }
