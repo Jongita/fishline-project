@@ -15,6 +15,12 @@
     /* Ensure child elements (like the overlay) stay within */
 }
 
+@media (max-width: 930px) {
+    .fullscreen-image {
+        background-position: left;
+    }
+}
+
 .fullscreen-image::before {
     content: "";
     position: absolute;
