@@ -76,7 +76,7 @@
 
 .fixed-text {
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 40%;
     transform: translateX(-50%);
     width: 600px;
