@@ -12,12 +12,12 @@ body * {
     /* Given color */
     --secondary-color: rgb(0, 0, 0);
     /* Darker shade for contrast */
-    --background-color: #A6D8D4;
+    --background-color: rgb(166, 216, 212);
     /* Lighter shade for background */
     --secondary-background-color: #F4F7FA;
 
     color: rgb(29, 106, 117);
-    color: #A6D8D4;
+    color: rgb(166, 216, 212);
     color: #F4F7FA;
     color: rgb(196, 241, 190);
     color: rgba(53, 53, 53, 0.8);;

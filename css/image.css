@@ -16,7 +16,7 @@
 }
 
 .headerscreen-image {
-    height: 25vh;
+    height: 15vh;
     /* 25% ekrano aukščio */
     width: 100vw;
     background-image: url('../images/fish.png');
@@ -35,6 +35,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 75%); */
 }
 
 /* Švelnus „dark overlay“ efektas */
@@ -69,8 +70,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Light grey with 50% transparency */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%, rgba(166, 216, 212, 0.3) 70%, rgba(166, 216, 212, 0) 100%);
+    
 }
 
 
