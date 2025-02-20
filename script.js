@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-window.onload = function () {
-    document.querySelector('.fixed-text').classList.add('visible');
-};
+
 
 window.addEventListener('scroll', function () {
     const header = document.querySelector('.mainHeaderContainer');
@@ -90,5 +88,15 @@ function filterProducts() {
     });
 }
 
-window.onload = displayProducts;
+window.onload = function () {
+    // Rodo fiksuotą tekstą
+    const fixedTextElement = document.querySelector('.fixed-text');
+    if (fixedTextElement) {
+        fixedTextElement.classList.add('visible');
+    }
+
+    // Įkelia produktus
+    displayProducts();
+};
+
 
