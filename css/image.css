@@ -5,7 +5,7 @@
     /* 100% of the viewport width */
     background-image: url('../images/fish.png');
     /* Add the image path */
-    background-position: center center;
+    background-position: right center;
     /* Center the image */
     background-repeat: no-repeat;
     /* Prevent the image from repeating */
@@ -15,13 +15,14 @@
     /* Ensure child elements (like the overlay) stay within */
 }
 
+
 .headerscreen-image {
     height: 25vh;
     /* 25% ekrano aukščio */
     width: 100vw;
     background-image: url('../images/fish.png');
     /* Žuvies nuotrauka */
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -36,6 +37,7 @@
     letter-spacing: 2px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 88%, 0 75%); */
+    
 }
 
 /* Švelnus „dark overlay“ efektas */
@@ -48,6 +50,9 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     /* Juodas atspalvis su 50% permatomumu */
+    z-index: 1; /* Ensure it stays below content */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 100%);
+   
 }
 
 
@@ -70,7 +75,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 30%, rgba(166, 216, 212, 0.3) 70%, rgba(166, 216, 212, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 50%, rgba(166, 216, 212, 0.3) 70%, rgba(166, 216, 212, 0) 100%);
     
 }
 

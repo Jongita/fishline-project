@@ -60,17 +60,28 @@
 
     <section>
         <div class="headerscreen-image">
-
+            <header>
+                <h1>Produktai</h1>
+                <input type="text" id="search" placeholder="Ieškoti žuvies..." onkeyup="filterProducts()">
+            </header>
         </div>
     </section>
     <section>
-        <section>
-            <h1>Šaldyta Žuvis</h1>
-            <input type="text" id="search" class="search-bar" placeholder="Ieškoti pagal pavadinimą..." onkeyup="filterProducts()">
-            <div class="productCardList" id="productList"></div>
-        </section>
+        <main>
+            <aside class="sidebar">
+                <h3>Kategorijos</h3>
+                <ul>
+                    <li onclick="filterByCategory('Visos')">Visos</li>
+                    <li onclick="filterByCategory('Skumbrė')">Skumbrė</li>
+                    <li onclick="filterByCategory('Lašiša')">Lašiša</li>
+                    <li onclick="filterByCategory('Menkė')">Menkė</li>
+                </ul>
+            </aside>
 
-        </script>
+            <section class="product-container">
+                <div id="productList"></div>
+            </section>
+        </main>
 
     </section>
 

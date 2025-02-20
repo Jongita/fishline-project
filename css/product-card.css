@@ -1,41 +1,119 @@
-.search-bar {
-      margin-bottom: 20px;
-  }
+.headerscreen-image header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 150px;
+    gap: 35px;
+    
+}
 
-.productCardList {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-  
-  }
+.headerscreen-image header h1 {
+    font-size: 34.5px;
+    font-weight: 700;
+    line-height: 34.5px;
+    color: var(--primary-color);
+}
+
+#search {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    /* Ensure visibility */
+    color: white;
+
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    color: var(--secondary-color);
+    padding: 15px;
+    padding-left: 30px;
+    min-height: 100vh;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    color: var(--secondary-color);
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+
+
+.sidebar ul li {
+   
+    cursor: pointer;
+    color: var(--secondary-color);
+    padding: 20px 0px;
+    
+}
+
+.sidebar ul li:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 7.5px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.product-container {
+    width: 100%;
+    padding: 20px;
+    
+}
+
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
 
 .card {
-      background: var(--secondary-background-color);
-      width: 300px;
-      box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
- 
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
+    background-color: var(--secondary-background-color);
+  
+    width: 300px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .card:hover {
     box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transform: translateY(-15px);
-  }
+    transform: translateY(-10px);
+}
 
 .card img {
-      object-fit: cover;
-      width: 100%;
-     
-  }
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
 
 .descriptionContent {
-      padding: 10px;
-      font-size: 1rem;
-      color: var(--secondary-color);
-      text-align: center;
-  }
+    padding: 10px;
+    text-align: center;
+    color: var(--secondary-color);
+}
