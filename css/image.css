@@ -1,5 +1,5 @@
 .fullscreen-image {
-    height: 70vh;
+    height: 100vh;
     /* 70% of the viewport height */
     width: 100vw;
     /* 100% of the viewport width */
@@ -16,7 +16,7 @@
 }
 
 .headerscreen-image {
-    height: 15vh;
+    height: 25vh;
     /* 25% ekrano aukščio */
     width: 100vw;
     background-image: url('../images/fish.png');

@@ -43,3 +43,52 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => document.getElementById("header-placeholder").innerHTML = data);
 });
 
+const products = [
+    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", image: "./images/skumbre.jpg" },
+    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", image: "./images/skumbre.jpg" },
+];
+
+function displayProducts() {
+    const productList = document.getElementById("productList");
+    productList.innerHTML = "";
+    products.forEach(product => {
+        productList.innerHTML += `
+                    <div class="card">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="descriptionContent">
+                            <h4>${product.name}</h4>
+                            <p>${product.latin}</p>
+                            <p>${product.size}</p>
+                            <p>${product.origin}</p>
+                        </div>
+                    </div>`;
+    });
+}
+
+function filterProducts() {
+    const searchValue = document.getElementById("search").value.toLowerCase();
+    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchValue));
+    document.getElementById("productList").innerHTML = "";
+    filteredProducts.forEach(product => {
+        document.getElementById("productList").innerHTML += `
+                    <div class="card">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="descriptionContent">
+                            <h4>${product.name}</h4>
+                            <p>${product.latin}</p>
+                            <p>${product.size}</p>
+                            <p>${product.origin}</p>
+                        </div>
+                    </div>`;
+    });
+}
+
+window.onload = displayProducts;
+
