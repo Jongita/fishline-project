@@ -3,13 +3,8 @@
     padding: 40px 20px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    background-image: url('./images/contact-bg.jpg');
-    /* Optional background image */
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    background-color: var(--background-color);
-    /* To blend with the image */
+    
+    
 }
 
 .container {

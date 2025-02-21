@@ -23,6 +23,15 @@ body * {
     color: rgba(53, 53, 53, 0.8);;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--primary-color);
+    /* Container with white background for readability */
+    border-radius: 10px;
+}
+
 .mz_component {
     position: relative;
 }
