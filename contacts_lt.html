@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/facts.css">
+    <link rel="stylesheet" href="./css/contacts-lt.css">
+
     <link href="https://fonts.googleapis.com/css2?family=TT+Firs+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -60,28 +62,58 @@
 
     <section>
         <div class="headerscreen-image">
-            <header>
-                <h1>Produktai</h1>
-                <input type="text" id="search" placeholder="Ieškoti žuvies..." onkeyup="filterProducts()">
-            </header>
+
         </div>
     </section>
-    <section>
-        <main>
-            <aside class="sidebar">
-                <h3>Kategorijos</h3>
-                <ul>
-                    <li onclick="filterByCategory('Visos')">Visos</li>
-                    <li onclick="filterByCategory('Skumbrė')">Skumbrė</li>
-                    <li onclick="filterByCategory('Lašiša')">Lašiša</li>
-                    <li onclick="filterByCategory('Menkė')">Menkė</li>
-                </ul>
-            </aside>
+    <section class="contact-page">
+        <div class="container">
+            <h1 class="section-title">Mūsų Kontaktai</h1>
 
-            <section class="product-container">
-                <div id="productList"></div>
-            </section>
-        </main>
+            <!-- Adresai -->
+            <div class="contact-section">
+                <h2>Adresai</h2>
+                <div class="contact-box">
+                    <h3>UAB FishLine</h3>
+                    <p>Sandėlių g. 30, 95107 Klaipėda</p>
+                    <p>Įmonės kodas: 300743430</p>
+                    <p>PVM kodas: LT100004007012</p>
+                </div>
+            </div>
+
+
+            <!-- El. paštas -->
+            <div class="contact-section">
+                <h2>El. paštas</h2>
+                <p><a href="mailto:sales@fishline.lt">sales@fishline.lt</a></p>
+                <p><a href="mailto:info@fishline.lt">info@fishline.lt</a></p>
+            </div>
+
+            <!-- Mūsų Komanda -->
+            <div class="contact-section">
+                <h2>Mūsų Komanda</h2>
+                <div class="team-list">
+                    <div class="team-member">
+                        <h3>Direktorius</h3>
+                        <p>Darius Norvaišas</p>
+                        <p><a href="mailto:darius@fishline.lt">darius@fishline.lt</a></p>
+                        <p>Tel. <a href="tel:+37067035000">+370 670 35000</a></p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Techninis vadovas</h3>
+                        <p>Edvardas Gikaras</p>
+                        <p><a href="mailto:edvardas@fishline.lt">edvardas@fishline.lt</a></p>
+                        <p>Tel. <a href="tel:+370610 00000">+370 610 00000</a></p>
+                    </div>
+                    <div class="team-member">
+                        <h3>Eksporto vadovas</h3>
+                        <p>Vardenis Pavardenis</p>
+                        <p><a href="mailto:darius@fishline.lt">darius@fishline.lt</a></p>
+                        <p>Tel. <a href="tel:+37067035000">+370 670 35000</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </section>
 
