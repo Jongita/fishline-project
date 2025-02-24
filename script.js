@@ -107,3 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading footer:", error));
 });
+
+// footer:
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("footer_en.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer_en-placeholder").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading footer:", error));
+});
