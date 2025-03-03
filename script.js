@@ -41,17 +41,17 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => document.getElementById("header-placeholder").innerHTML = data);
 });
 
-const products = [
-    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", category: "Skumbrė", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", category: "Lašiša", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", category: "Menkė", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", category: "Skumbrė", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", category: "Lašiša", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", category: "Menkė", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta skumbrė", latin: "Scomber Scumbrius", size: "400-600 gr", origin: "Norvegija", category: "Skumbrė", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta lašiša", latin: "Salmo salar", size: "500-700 gr", origin: "Škotija", category: "Lašiša", image: "./images/skumbre.jpg" },
-    { name: "Šaldyta menkė", latin: "Gadus morhua", size: "300-500 gr", origin: "Islandija", category: "Menkė", image: "./images/skumbre.jpg" },
-];
+let products = [];
+
+async function loadProducts() {
+    try {
+        const response = await fetch('./products.json');
+        products = await response.json();
+        displayProducts(); // Display products after loading
+    } catch (error) {
+        console.error("Error loading products:", error);
+    }
+}
 
 function displayProducts(filteredProducts = products) {
     const productList = document.getElementById("productList");
@@ -88,14 +88,13 @@ function filterByCategory(category) {
 }
 
 window.onload = function () {
+    loadProducts(); // Load products when the page loads
+
     // Rodo fiksuotą tekstą
     const fixedTextElement = document.querySelector('.fixed-text');
     if (fixedTextElement) {
         fixedTextElement.classList.add('visible');
     }
-
-    // Įkelia produktus
-    displayProducts();
 };
 
 // footer:

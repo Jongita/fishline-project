@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Šaldyta skumbrė",
+        "latin": "Scomber Scumbrius",
+        "size": "400-600 gr",
+        "origin": "Norvegija",
+        "category": "Skumbrė",
+        "image": "./images/skumbre.jpg"
+    },
+    {
+        "name": "Šaldyta lašiša",
+        "latin": "Salmo salar",
+        "size": "500-700 gr",
+        "origin": "Škotija",
+        "category": "Lašiša",
+        "image": "./images/lasi.jpg"
+    },
+    {
+        "name": "Šaldyta menkė",
+        "latin": "Gadus morhua",
+        "size": "300-500 gr",
+        "origin": "Islandija",
+        "category": "Menkė",
+        "image": "./images/menke.jpg"
+    },
+    {
+        "name": "Šaldyta skumbrė",
+        "latin": "Scomber Scumbrius",
+        "size": "400-600 gr",
+        "origin": "Norvegija",
+        "category": "Skumbrė",
+        "image": "./images/skumbre.jpg"
+    },
+    {
+        "name": "Šaldyta lašiša",
+        "latin": "Salmo salar",
+        "size": "500-700 gr",
+        "origin": "Škotija",
+        "category": "Lašiša",
+        "image": "./images/lasisa.jpg"
+    },
+    {
+        "name": "Šaldyta menkė",
+        "latin": "Gadus morhua",
+        "size": "300-500 gr",
+        "origin": "Islandija",
+        "category": "Menkė",
+        "image": "./images/lasis.jpg"
+    }
+   
+]
